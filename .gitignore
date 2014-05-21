@@ -1,5 +1,2 @@
 .build/
 .deploy/
-.build/error.html
-.build/index.html
-.build/static/css/style.css
