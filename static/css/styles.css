@@ -65,7 +65,7 @@ a {
   border: 1px solid #EBEBEB; }
 
 #bt-top {
-  background-image: url("../img/header photo.jpg");
+  background-image: url("../images/header photo.jpg");
   width: 100%;
   height: 780px;
   position: relative;
@@ -79,7 +79,7 @@ a {
     color: #999; }
 
 #bt-screens {
-  background-image: url("../img/screens.png");
+  background-image: url("../images/screens.png");
   width: 960px;
   background-repeat: no-repeat;
   background-position: center;
@@ -199,7 +199,7 @@ a img {
   margin: 0 auto 50px auto; }
 
 #bt-mid-demo {
-  background-image: url("../img/browser.png");
+  background-image: url("../images/browser.png");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
