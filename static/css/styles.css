@@ -1,24 +1,18 @@
 body {
-  font-family: "proxima_nova_rgregular";
-  margin: 0px;
-  padding: 0px; }
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0; }
 
 h1, h2, h3 {
-  font-family: proxima_nova_alt_rgregular;
   font-weight: normal;
   color: #333; }
   h1 strong, h2 strong, h3 strong {
-    font-family: proxima_nova_alt_rgbold;
     font-weight: normal; }
 
 .clear {
   clear: both; }
-
-input {
-  font-family: proxima_nova_rgregular; }
-
-span, p {
-  font-family: proxima_nova_ltregular; }
 
 h1 {
   font-size: 50px; }
@@ -30,7 +24,6 @@ h3 {
   font-size: 26px; }
 
 a {
-  font-family: "proxima_nova_alt_rgregular";
   font-weight: normal;
   text-decoration: none;
   color: #fe6d68; }
@@ -74,7 +67,6 @@ a {
   background-repeat: no-repeat;
   text-align: center; }
   #bt-top h3 {
-    font-family: proxima_nova_ltregular;
     margin-top: -20px;
     color: #999; }
 
@@ -86,7 +78,7 @@ a {
   background-size: contain;
   height: 310px;
   position: absolute;
-  bottom: 0px; }
+  bottom: 0; }
 
 .play-button {
   background: #f63a3b;
@@ -105,7 +97,7 @@ a {
     top: 10px; }
 
 a img {
-  border: 0px; }
+  border: 0; }
 
 /* signup styles */
 .join-alpha-container {
@@ -113,17 +105,14 @@ a img {
   margin-bottom: 50px; }
   .join-alpha-container h2 {
     text-transform: uppercase;
-    font-family: proxima_nova_alt_rgbold;
     margin-bottom: 15px; }
   .join-alpha-container span {
     color: #777;
-    font-size: 14px;
-    font-family: proxima_nova_alt_rgregular; }
+    font-size: 14px; }
   .join-alpha-container form {
     margin-top: 15px; }
   .join-alpha-container input[type="submit"] {
     text-transform: uppercase;
-    font-family: proxima_nova_alt_rgbold;
     color: #FFF;
     background: #f63a3b;
     /* Old browsers */
@@ -133,12 +122,12 @@ a img {
     -moz-border-radius-topleft: 0px;
     border-top-right-radius: 3px;
     -moz-border-radius-topright: 3px;
-    border-bottom-left-radius: 0px;
-    -moz-border-radius-bottomleft: 0px;
+    border-bottom-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
     border-bottom-right-radius: 3px;
     -moz-border-radius-bottomright: 3px;
     padding-top: 4px;
-    border: 0px;
+    border: 0;
     height: 40px;
     width: 80px;
     margin: 2px 0 0 0; }
@@ -154,12 +143,12 @@ a img {
     font-size: 17px;
     border-top-left-radius: 3px;
     -moz-border-radius-topleft: 3px;
-    border-top-right-radius: 0px;
-    -moz-border-radius-topright: 0px;
+    border-top-right-radius: 0;
+    -moz-border-radius-topright: 0;
     border-bottom-left-radius: 3px;
     -moz-border-radius-bottomleft: 3px;
-    border-bottom-right-radius: 0px;
-    -moz-border-radius-bottomright: 0px; }
+    border-bottom-right-radius: 0;
+    -moz-border-radius-bottomright: 0; }
     .join-alpha-container input[type="text"]:focus {
       border-color: rgba(199, 20, 0, 0.3);
       outline: 0;
@@ -206,7 +195,7 @@ a img {
   width: 960px;
   height: 337px;
   position: absolute;
-  bottom: 0px; }
+  bottom: 0; }
 
 #bt-mid-hud {
   width: 760px;
@@ -266,7 +255,6 @@ a img {
   background-color: #FFF;
   padding-top: 40px; }
   #bt-features h3 {
-    font-family: proxima_nova_ltregular;
     color: #000; }
   #bt-features span {
     color: #000;

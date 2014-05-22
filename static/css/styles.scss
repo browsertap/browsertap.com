@@ -3,18 +3,20 @@
 $content-width: 960px;
 
 body {
-	font-family: "proxima_nova_rgregular";
-	margin: 0px;
-	padding: 0px;
+	font-family: "proxima-nova", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
 }
 
 h1, h2, h3 {
-	font-family: proxima_nova_alt_rgregular;
+	// font-family: proxima_nova_alt_rgregular;
 	font-weight: normal;
 	color: #333;
 
 	strong {
-		font-family: proxima_nova_alt_rgbold;
+		// font-family: proxima_nova_alt_rgbold;
 		font-weight: normal;
 	}
 }
@@ -24,11 +26,11 @@ h1, h2, h3 {
 }
 
 input {
-	font-family: proxima_nova_rgregular;
+	// font-family: proxima_nova_rgregular;
 }
 
 span, p {
-	font-family: proxima_nova_ltregular;
+	// font-family: proxima_nova_ltregular;
 }
 
 
@@ -45,7 +47,7 @@ h3 {
 }
 
 a {
-	font-family: "proxima_nova_alt_rgregular";
+	// font-family: "proxima_nova_alt_rgregular";
 	font-weight: normal;
 	text-decoration: none;
 	color: #fe6d68;
@@ -97,7 +99,7 @@ a {
 	text-align: center;
 
 	h3 {
-		font-family: proxima_nova_ltregular;
+		// font-family: proxima_nova_ltregular;
 		margin-top: -20px;
 		color: #999;
 	}
@@ -111,7 +113,7 @@ a {
 	background-size: contain;
 	height: 310px;
 	position: absolute;
-	bottom: 0px;
+	bottom: 0;
 }
 
 
@@ -138,7 +140,7 @@ a {
 }
 
 a img {
-	border: 0px;
+	border: 0;
 }
 
 
@@ -150,14 +152,14 @@ a img {
 
 	h2 {
 		text-transform: uppercase;
-		font-family: proxima_nova_alt_rgbold;
+		// font-family: proxima_nova_alt_rgbold;
 		margin-bottom: 15px;
 	}
 
 	span {
 		color: #777;
 		font-size: 14px;
-		font-family: proxima_nova_alt_rgregular;
+		// font-family: proxima_nova_alt_rgregular;
 	}
 
 	form {
@@ -166,14 +168,14 @@ a img {
 
 	input[type="submit"] {
 		text-transform: uppercase;
-		font-family: proxima_nova_alt_rgbold;
+		// font-family: proxima_nova_alt_rgbold;
 		color: #FFF;
 		@include red-grad();
 		font-size: 17px;
 		font-weight: bold;
-		@include roundtb(0px, 3px, 0px, 3px);
+		@include roundtb(0px, 3px, 0, 3px);
 		padding-top: 4px;
-		border: 0px;
+		border: 0;
 		height: 40px;
 		width: 80px;
 		margin: 2px 0 0 0;
@@ -189,7 +191,7 @@ a img {
 		top: -1px;
 		margin: 0 -4px 0 0;
 		font-size: 17px;
-		@include roundtb(3px, 0px, 3px, 0px);
+		@include roundtb(3px, 0, 3px, 0);
 
 
     	&:focus {
@@ -263,7 +265,7 @@ a img {
 	width: $content-width;
 	height: 337px;
 	position: absolute;
-	bottom: 0px;
+	bottom: 0;
 }
 
 #bt-mid-hud {
@@ -327,7 +329,7 @@ $icon-size: 110px;
 	padding-top: 40px;
 
 	h3 {
-		font-family: proxima_nova_ltregular;
+		// font-family: proxima_nova_ltregular;
 		color: #000;
 	}
 	span {
