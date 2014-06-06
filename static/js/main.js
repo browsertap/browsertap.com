@@ -1,8 +1,8 @@
 $(document).ready(function() {
-	analytics.track("Home Page Visit");
+	// analytics.track("Home Page Visit");
 	injectAllFeatures();
 	injectHoverStates();
-	injectAnalytics();
+	// injectAnalytics();
 })
 
 
