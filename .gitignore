@@ -1,2 +1,4 @@
 .build/
 .deploy/
+static/css/styles.css
+.build/static/js/main.js
