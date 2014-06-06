@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<link rel="stylesheet" type="text/css" href="vendors/fancybox/jquery.fancybox.css" />
+<link rel="stylesheet" type="text/css" href="{% static '/vendors/fancybox/jquery.fancybox.css' %}" />
 
 <!-- top nav information with the video -->
 <div id="bt-top">
@@ -30,7 +30,7 @@
 
     <div id="bt-screens">
       <a href="http://player.vimeo.com/video/57151492?title=0&byline=0&portrait=0" class="play-button fancybox fancybox.iframe">
-        <img src="{% static '/images/Shape 1.png' %}" />
+        <img src="{% static '/images/shape-1.png' %}" />
       </a>
     </div>
   </div>
@@ -53,20 +53,20 @@
     <div id="bt-mid-demo">
       <div id="bt-mid-bg"></div>
       <div id="bt-mid-hud">
-        <div class="bt-mid-icon">
+        <div class="bt-mid-icon" data-shot="{% static '/images/browser-shots/Chrome.jpg' %}">
           <img src="{% static '/images/browsers/Chrome.png' %}" />
         </div>
-        <div class="bt-mid-icon">
+        <div class="bt-mid-icon" data-shot="{% static '/images/browser-shots/Safari.jpg' %}">
           <img src="{% static '/images/browsers/Safari.png' %}" />
         </div>
-        <div class="bt-mid-icon">
-          <img src="{% static '/images/browsers/Internet Explorer.png' %}" />
+        <div class="bt-mid-icon" data-shot="{% static '/images/browser-shots/IE.jpg' %}">
+          <img src="{% static '/images/browsers/IE.png' %}" />
         </div>
-        <div class="bt-mid-icon firefox-icon">
-          <img src="{% static '/images/browsers/Firefox Logo.png' %}" />
+        <div class="bt-mid-icon" data-shot="{% static '/images/browser-shots/Firefox.jpg' %}">
+          <img src="{% static '/images/browsers/Firefox.png' %}" />
         </div>
-        <div class="bt-mid-icon">
-          <img src="{% static '/images/browsers/Opera logo.png' %}" />
+        <div class="bt-mid-icon" data-shot="{% static '/images/browser-shots/Opera.jpg' %}">
+          <img src="{% static '/images/browsers/Opera.png' %}" />
         </div>
         <div id="bt-icon-selector"></div>
       </div>
@@ -115,16 +115,16 @@
 
 
     <div id="bt-footer-footer">
-      <div id="bt-footer-mixpanel-badge">
-        <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+      <div id="bt-footer-mixpanel-badge" class="hidden">
+        <a href="http://mixpanel.com/f/partner"><img src="http://cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
       </div>
       <div id="bt-footer-links">
         <a href="http://spiceapps.com">About</a> <span>|</span>
         <a href="mailto:hello@browsertap.com">Contact</a> <span>|</span>
         <a href="http://craigandtim.com">Blog</a> <span>|</span>
-        <a href="http://twitter.com/browsertap" target="_blank"><img src="{% static '/images/Shape 10.png' %}" />Twitter</a>
+        <a href="http://twitter.com/browsertap" target="_blank"><img src="{% static '/images/shape-10.png' %}" />Twitter</a>
       </div>
-      <span>Copyright &copy; 2013 Spice Apps. All rights reserved.</span>
+      <span>Copyright &copy; 2014 Spice Apps. All rights reserved.</span>
     </div>
   </div>
 </div>
@@ -133,14 +133,15 @@
 
 <!-- vendor -->
 
-<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="{% static '/js/bootstrap.js' %}"></script>
-<script src="{% static 'vendors/retina/retina.js' %}" type="text/javascript"></script>
-<script src="{% static 'vendors/js/transit.js' %}" type="text/javascript"></script>
-<script src="{% static 'vendors/fancybox/jquery.fancybox.js' %}" type="text/javascript"></script>
+<script src="{% static '/vendors/retina/retina.js' %}" type="text/javascript"></script>
+<script src="{% static '/vendors/js/transit.js' %}" type="text/javascript"></script>
+<script src="{% static '/vendors/js/underscore.js' %}" type="text/javascript"></script>
+<script src="{% static '/vendors/fancybox/jquery.fancybox.js' %}" type="text/javascript"></script>
 
 <!-- my js here -->
-<!-- <script src="{% static '/js/main.js' %}"></script> -->
+<script src="{% static '/js/main.js' %}"></script>
 
 <script type="text/javascript">
   $(document).ready(function() {
