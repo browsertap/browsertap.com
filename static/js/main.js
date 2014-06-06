@@ -1,47 +1,86 @@
 $(document).ready(function() {
+	analytics.track("Home Page Visit");
 	injectAllFeatures();
 	injectHoverStates();
+	injectAnalytics();
 })
 
 
+
+function injectAnalytics() {
+	$(".play-button").click(function() {
+		analytics.track("Play BrowserTap Video");
+	});
+
+	// analytics.timeout = 1000;
+
+	var forms = $("[name='mc-embedded-subscribe-form']");
+
+	function bindSubmit(form) {
+		var oldSubmit = form.onsubmit;
+		// console.log($(form).find("[type='submit']"))
+		form.onsubmit = null;
+		$(form).find("[type='submit']").click(function(e) {
+			analytics.track("Sign Up For Alpha");
+			var self = this;
+			e.preventDefault();
+			e.stopPropagation();
+			setTimeout(function() {
+				// oldSubmit.call(self);
+				$(form).submit();
+			}, 250);
+		})
+	}
+
+
+	for(var i = forms.length; i--;) {
+		bindSubmit(forms[i]);
+	}
+
+}
+
 //this is TEMPORARY! 
 function injectAllFeatures() {
+
 
 	var features = {
 
 		"Test across multiple browsers (30+)": true,
 		"Browser Developer Tools": true,
-		"Automated Layout Testing": false,
-		"Automated Interactive Testing": false,
+		// "Automated CSS Testing": false,
+		// "Automated Interactive Testing": false,
+		// "Automated JS Testing": false,
 
 		"No Installation Required": true,
-		"Browser extensions & bookmarklet": true,
+		// "Browser extensions & bookmarklet": true,
 		"Localhost Support": true,
 		"Android Testing": false,
 
 		"1-Click Testing": true,
-		"History Support (back & forward)": false,
+		// "History Support (back & forward)": false,
 		"iPhone Testing": false,
 
 		"Clipboard Support (copy & paste)": true,
 		"Real IE browsers (not IETester)": false,
 		"Mac Testing (of Mac browsers)": false,
 
-		"Drag & drop file support": false,
+		// "Drag & drop file support": false,
 		"Keyboard Shortcuts": true,
 		"PC Testing (of PC browsers)": true,
 
-		"Sceenshot Testing": false,
+		// "Sceenshot Testing": false,
 		"Responsive Testing": true,
 		"Linux Testing (of Linux browsers)": false,
 		
 		"Parallel Testing": true,
-		"Audio Support": false,
-		"Natural Scrolling": false,
-		"Emulator API": false,
-		"Live Browser Reloads": false,
-		"Screensharing & Team Collaboration": false,
-		"Web Camera Support": false
+		// "Audio Support": false,
+		// "Natural Scrolling": false,
+		// "Emulator API": false,
+		// "Live Browser Reloads": false,
+		// "Screensharing & Team Collaboration": false,
+		// "Web Camera Support": false,
+		"Unlimited Testing": true,
+		// "Synchronized parallel testing": false
 	};
 
 	$allFeatures = $("#all-features");
