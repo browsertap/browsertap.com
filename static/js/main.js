@@ -1,16 +1,11 @@
 $(document).ready(function() {
-	injectSignupForms();
+	injectAllFeatures();
 	injectHoverStates();
 })
 
 
-function injectSignupForms() {
-	$("#join-alpha-top,#join-alpha-bottom").html($("[data-templateName='signup-form']").html());
-}
-
 //this is TEMPORARY! 
 function injectAllFeatures() {
-
 
 	var features = {
 
