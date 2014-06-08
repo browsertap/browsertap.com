@@ -2,3 +2,5 @@
 .deploy/
 static/css/styles.css
 .build/static/js/main.js
+plugins/__init__.pyc
+plugins/default.pyc
