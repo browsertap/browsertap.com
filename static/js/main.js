@@ -42,7 +42,6 @@ function injectAnalytics() {
 //this is TEMPORARY! 
 function injectAllFeatures() {
 
-
 	var features = {
 
 		"Test across multiple browsers (30+)": true,
