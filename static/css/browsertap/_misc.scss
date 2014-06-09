@@ -23,10 +23,16 @@ $red-color-light: #fe6d68;
 		@include gradient-vertical($start-color: $red-color, $end-color: $red-color-light);
 	  @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
 	  background-repeat: repeat-x;
+
+	  color: #fff;
+	  border: 0;
 	  // border-color: darken($red-color, 14%);
+	  @include box-shadow(none);
 
 	  &:hover,
-	  &:focus  {
+	  &:focus {
+	  	border: 0;
+	  	@include gradient-vertical($start-color: darken($red-color, 14%), $end-color: darken($red-color-light, 14%));
 	    background-color: $red-color;
 	    // background-position: 0 -15px;
 	  }
@@ -96,89 +102,111 @@ $red-color-light: #fe6d68;
 			padding: 15px 40px 12px;
 
 			font-size: 30px;
-			color: #fff;
-
-			border: 0;
 		}
 	}
-
-	#join-alpha-top {
-		// 
-
-	}
-
 
 }
 
 
-
-
-
-
-
-
-/* signup styles */
+// Signup styles
 
 .join-alpha-container {
-	margin-top: 50px;
-	margin-bottom: 50px;
+	@include make-lg-column(6);
+	@include make-lg-column-offset(3);
+
+	margin: 50px 0;
 
 	h3 {
 		font-weight: 600;
 		text-transform: uppercase;
 	}
 
-	span {
-		color: #777;
-		font-size: 14px;
-		// font-family: proxima_nova_alt_rgregular;
-	}
+	span.text-muted { color: #777; }
 
-	form {
-		margin-top: 15px;
-		margin-bottom: 20px;
-	}
-
-	input[type="submit"] {
-		text-transform: uppercase;
-		// font-family: proxima_nova_alt_rgbold;
-		color: #FFF;
-		// @include red-grad();
-		font-size: 17px;
-		// font-weight: bold;
-		@include roundtb(0px, 3px, 0, 3px);
-		padding-top: 4px;
+	input, button {
 		border: 0;
 		height: 40px;
+
+		@include form-control-focus($red-color);
+	}
+
+	button[type="submit"] {
+		text-transform: uppercase;
+		font-size: 17px;
+		font-weight: 600;
+
 		width: 80px;
-		margin: 2px 0 0 0;
 	}
 
 	input[type="text"] {
-		color: #333;
-		height: 40px;
-		width: 240px;
-		padding: 0 10px 0 10px;
-		border: 0;
-		position: relative;
-		top: -1px;
-		margin: 0 -4px 0 0;
-		font-size: 17px;
-		@include roundtb(3px, 0, 3px, 0);
-
-
-    	&:focus {
-			border-color: rgba(199, 20, 0, 0.3);
-			outline: 0;
-			outline: thin dotted \9;
-			/* IE6-9 */
-
-			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(199, 20, 0, 0.3);
-				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(199, 20, 0, 0.3);
-					box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(199, 20, 0, 0.3);
-		}
+		// width: 240px;
 	}
+
 }
+
+
+
+
+
+// /* signup styles */
+
+// .join-alpha-container {
+
+
+// 	#join-alpha-top {
+// 		// 
+
+// 	}
+
+	
+
+	
+
+// 	form {
+// 		margin-top: 15px;
+// 		margin-bottom: 20px;
+// 	}
+
+	// input[type="submit"] {
+	// 	text-transform: uppercase;
+	// 	// font-family: proxima_nova_alt_rgbold;
+	// 	color: #FFF;
+	// 	// @include red-grad();
+	// 	font-size: 17px;
+	// 	// font-weight: bold;
+	// 	@include roundtb(0px, 3px, 0, 3px);
+	// 	padding-top: 4px;
+	// 	border: 0;
+	// 	height: 40px;
+	// 	width: 80px;
+	// 	margin: 2px 0 0 0;
+// 	}
+
+// 	input[type="text"] {
+// 		color: #333;
+// 		height: 40px;
+// 		width: 240px;
+// 		padding: 0 10px 0 10px;
+// 		border: 0;
+// 		position: relative;
+// 		top: -1px;
+// 		margin: 0 -4px 0 0;
+// 		font-size: 17px;
+// 		@include roundtb(3px, 0, 3px, 0);
+
+
+//     	&:focus {
+// 			border-color: rgba(199, 20, 0, 0.3);
+// 			outline: 0;
+// 			outline: thin dotted \9;
+// 			/* IE6-9 */
+
+// 			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(199, 20, 0, 0.3);
+// 				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(199, 20, 0, 0.3);
+// 					box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(199, 20, 0, 0.3);
+// 		}
+// 	}
+// }
 
 .join-alpha-container-footer {
 	h2 {
@@ -188,6 +216,12 @@ $red-color-light: #fe6d68;
 		color: #FFF;
 	}
 }
+
+
+
+
+
+
 
 
 /* mid */
@@ -244,7 +278,7 @@ $red-color-light: #fe6d68;
 #bt-mid-hud {
 	width: 760px;
 	height: 160px;
-	@include rounded(10px);
+	// @include rounded(10px);
 	background-color: rgba(0, 0, 0, 0.8);
 	margin: 0 auto;
 	position: relative;
@@ -262,7 +296,7 @@ $icon-size: 110px;
 	height: $icon-size;
 	text-align: middle;
 	position: relative;
-	@include rounded(10px);
+	// @include rounded(10px);
 	img {
 		position: absolute;
 		left: $icon-size/2-68/2;
@@ -279,7 +313,7 @@ $icon-size: 110px;
 	left: 25px;
 	width: 100px;
 	height: 100px;
-	@include rounded(10px);
+	// @include rounded(10px);
 	border: 5px solid white;
 }
 
@@ -345,7 +379,7 @@ $icon-size: 110px;
 .bt-extra-feature {
 	text-align: left;
 	background-color: #F4F4F4;
-	@include rounded(2px);
+	// @include rounded(2px);
 	float: left;
 	font-size: 13px;
 	color: #666;
