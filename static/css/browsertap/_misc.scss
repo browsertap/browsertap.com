@@ -8,8 +8,9 @@ html, body {
 }
 
 
+// 
 // Typopgraphy
-// -------------------------
+// --------------------------------------------------
 
 
 body {
@@ -27,7 +28,15 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
+h1 { font-size: 50px; }
+h2 { font-size: 28px; }
+h3 { font-size: 26px; }
+
+
+// 
 // Variables
+// --------------------------------------------------
+
 
 // 960 grid
 $content-width:   960px;
@@ -38,11 +47,73 @@ $red-color-light: #fe6d68;
 $icon-size: 150px;
 
 
-// global stuff
+
+// 
+// All block styles
+// --------------------------------------------------
 
 
 .bt-content {
 	@extend .container; 
+}
+
+
+// 
+// Signup styles
+// --------------------------------------------------
+
+
+.join-alpha-container {
+	// @include make-lg-column(5);
+	// @include make-lg-column-offset(4);
+
+	margin: 0 auto;
+	max-width: 340px;
+
+	margin-top:    40px;
+	margin-bottom: 70px;
+
+	h3 {
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	span.text-muted { color: #777; }
+
+	.input-group {
+		margin-top: 10px;
+
+		input, button {
+			border: 0;
+			height: 40px;
+
+		}
+
+		input[type="text"] {
+			@include box-shadow(none);
+			@include form-control-focus($red-color);
+
+			// width: 240px;
+		}
+
+		button[type="submit"] {
+			text-transform: uppercase;
+			font-size: 17px;
+			font-weight: 600;
+
+			width: 80px;
+		}
+	}
+
+	&#join-alpha-top {
+		// 
+	}
+
+	&#join-alpha-bottom {
+		h3, span { color: #fff; }
+	}
+	
+
 }
 
 
@@ -73,16 +144,11 @@ $icon-size: 150px;
 }
 
 
-h1 { font-size: 50px; }
-h2 { font-size: 28px; }
-h3 { font-size: 26px; }
 
+// 
+// Top block (above the fold) 
+// --------------------------------------------------
 
-
-// all homepage styles
-
-
-// Top section (above the fold) 
 #bt-top {
 	@include container-fixed();
 
@@ -141,60 +207,11 @@ h3 { font-size: 26px; }
 }
 
 
-// Signup styles
 
-.join-alpha-container {
-	// @include make-lg-column(5);
-	// @include make-lg-column-offset(4);
 
-	margin: 0 auto;
-	max-width: 340px;
-
-	margin-top:    40px;
-	margin-bottom: 70px;
-
-	h3 {
-		font-weight: 600;
-		text-transform: uppercase;
-	}
-
-	span.text-muted { color: #777; }
-
-	.input-group {
-		margin-top: 10px;
-
-		input, button {
-			border: 0;
-			height: 40px;
-
-		}
-
-		input[type="text"] {
-			@include box-shadow(none);
-			@include form-control-focus($red-color);
-
-			// width: 240px;
-		}
-
-		button[type="submit"] {
-			text-transform: uppercase;
-			font-size: 17px;
-			font-weight: 600;
-
-			width: 80px;
-		}
-	}
-
-	&#join-alpha-top {
-		// 
-	}
-
-	&#join-alpha-bottom {
-		h3, span { color: #fff; }
-	}
-	
-
-}
+// 
+// Middle block
+// --------------------------------------------------
 
 #bt-mid {
 	@include container-fixed();
