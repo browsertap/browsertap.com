@@ -150,13 +150,13 @@
   &:first-child {
     > .btn,
     > .btn-group {
-      margin-right: -1px;
+      // margin-right: -1px;
     }
   }
   &:last-child {
     > .btn,
     > .btn-group {
-      margin-left: -1px;
+      // margin-left: -1px;
     }
   }
 }
