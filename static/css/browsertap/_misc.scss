@@ -73,7 +73,10 @@ $red-color-light: #fe6d68;
 		}
 	}
 
-	h3 { color: $gray-light; }
+	h2 { 
+		margin-top: 0;
+		color: $gray-light; 
+	}
 
 
 	#bt-screens {
@@ -99,13 +102,9 @@ $red-color-light: #fe6d68;
 		}
 	}
 
+	#join-alpha-top {
+		// 
 
-	
-
-	
-
-	a img {
-		border: 0;
 	}
 
 
@@ -124,10 +123,9 @@ $red-color-light: #fe6d68;
 	margin-top: 50px;
 	margin-bottom: 50px;
 
-	h2 {
+	h3 {
+		font-weight: 600;
 		text-transform: uppercase;
-		// font-family: proxima_nova_alt_rgbold;
-		margin-bottom: 15px;
 	}
 
 	span {
@@ -138,6 +136,7 @@ $red-color-light: #fe6d68;
 
 	form {
 		margin-top: 15px;
+		margin-bottom: 20px;
 	}
 
 	input[type="submit"] {
