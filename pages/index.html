@@ -3,36 +3,51 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static '/vendors/fancybox/jquery.fancybox.css' %}" />
 
-<!-- top nav information with the video -->
-<div id="bt-top" class="container-fluid">
-  <div class="bt-content col-lg-12">
+<!-- top block information with the video, above the fold -->
+<div id="bt-top">
+  <div class="bt-content">
 
-    <!-- top nav -->
-    <div id="bt-header">
-      <img src="{% static '/images/browsertap-logo.png' %}" class="pull-left" alt="BrowserTap" />
-      <a href="/login" id="bt-header-signin">Sign In Now</a>
+    <div class="row">
+      <div class="col-lg-12"> 
+
+        <!-- top nav -->
+        <div id="bt-header">
+          <img src="{% static '/images/browsertap-logo.png' %}" class="pull-left" alt="BrowserTap" />
+
+          <a href="/login" id="bt-header-signin" class="pull-right btn btn-default">
+            Sign in now
+          </a>
+        </div>
+
+        <!-- big obnoxious header that should scare anyone away from the product -->
+        <h1>Fast and interactive <strong>cross-browser testing.</strong></h1>
+        <h3>Instant access to desktop browsers. No installs, no fuss.</h3>
+
+
+        <!-- call to action -->
+        <div id="join-alpha-top" class="join-alpha-container clear">
+          <h2>Join the alpha today.</h2>
+          <span>Completely free to sign up. Limited spots available.</span>
+
+          <form action="http://spiceapps.createsend.com/t/j/s/drdhti/" name="mc-embedded-subscribe-form" method="post">
+            <input name="cm-drdhti-drdhti" type="text" placeholder="Email Address" />
+            <input type="submit" name="subscribe" value="Send" />
+          </form>
+        </div>
+
+        <div id="bt-screens">
+          <a 
+            href="http://player.vimeo.com/video/57151492?title=0&byline=0&portrait=0" 
+            id="play-button"
+            class="btn btn-red btn-lg fancybox fancybox.iframe">
+            <span class="glyphicon glyphicon-play"></span>
+            <!-- <img src="{% static '/images/shape-1.png' %}" alt="Play button" /> -->
+          </a>
+        </div>
+
+      </div>
     </div>
 
-    <!-- big obnoxious header that should scare anyone away from the product -->
-    <h1>Fast and interactive <strong>cross-browser testing.</strong></h1>
-    <h3>Instant access to desktop browsers. No installs, no fuss.</h3>
-
-
-    <!-- call to action -->
-    <div id="join-alpha-top" class="join-alpha-container clear">
-      <h2>Join the alpha today.</h2>
-      <span>Completely free to sign up. Limited spots available.</span>
-      <form action="http://spiceapps.createsend.com/t/j/s/drdhti/" name="mc-embedded-subscribe-form" method="post">
-        <input name="cm-drdhti-drdhti" type="text" placeholder="Email Address" />
-        <input type="submit" name="subscribe" value="Send" />
-      </form>
-    </div>
-
-    <div id="bt-screens">
-      <a href="http://player.vimeo.com/video/57151492?title=0&byline=0&portrait=0" class="play-button fancybox fancybox.iframe">
-        <img src="{% static '/images/shape-1.png' %}" />
-      </a>
-    </div>
   </div>
 </div>
 

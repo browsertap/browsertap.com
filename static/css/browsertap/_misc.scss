@@ -2,32 +2,55 @@
 // Variables
 
 // 960 grid
-$content-width: 960px;
-
-@mixin red-grad() {
-	background: #f63a3b; /* Old browsers */
-	background: -moz-linear-gradient(top, #f63a3b 0%, #fe6d68 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f63a3b), color-stop(100%,#fe6d68)); /* Chrome,Safari4+ */
-}
+$content-width:   960px;
+$red-color:       #f63a3b;
+$red-color-light: #fe6d68;
 
 
 
-/* all homepage styles */
+
+// global stuff
+
 
 .bt-content {
-	// @include make-lg-column(12, 20px);
-
+	// 
+	@extend .container; 
 }
+
+
+.btn {
+	&.btn-red {
+		@include gradient-vertical($start-color: $red-color, $end-color: $red-color-light);
+	  @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+	  background-repeat: repeat-x;
+	  // border-color: darken($red-color, 14%);
+
+	  &:hover,
+	  &:focus  {
+	    background-color: $red-color;
+	    // background-position: 0 -15px;
+	  }
+
+	  &:active,
+	  &.active {
+	    background-color: $red-color;
+	    // border-color: darken($red-color, 14%);
+	  }
+	}
+}
+
+
+// all homepage styles
 
 
 // Top section (above the fold) 
 #bt-top {
+	@include container-fixed();
 
 	@include img-retina('../images/header-photo.jpg', '../images/header-photo@2x.jpg', 100%, 782px);
 	background-position: center top;
 	background-size: cover !important;
 
-	// @include container-fixed();
 	// height: 782px;
 
 	// hold positioning for child elements
@@ -40,58 +63,46 @@ $content-width: 960px;
 	#bt-header {
 		padding: 30px 0 60px 0;
 
+		a#bt-header-signin {
+			color: #333;
+			font-size: 13px;
+			font-weight: 700;
+			text-transform: uppercase;
 
+			border: 1px solid #EBEBEB;
+		}
 	}
 
-
-	// todo below
-
-
-	h3 {
-		// font-family: proxima_nova_ltregular;
-		margin-top: -20px;
-		color: #999;
-	}
-
-
-	#bt-header-signin {
-		float: right;
-		text-transform: uppercase;
-		color: #333;
-		// font-weight: bold;
-		background-color: #FFF;
-		padding: 6px 10px 5px 10px;
-		@include rounded(2px);
-		font-size: 13px;
-		border: 1px solid #EBEBEB;
-	}
+	h3 { color: $gray-light; }
 
 
 	#bt-screens {
-		background-image: url('../images/screens-multi.png');
-		width: $content-width;
-		background-repeat: no-repeat;
-		background-position: center;
+		@include make-xs-column(12, 20px);
+
+		// width: $content-width;
+		height: 330px;
+
+		@include img-retina('../images/screens-multi.png', '../images/screens-multi@2x.png', 960px, 331px);
+		background-position: center top;
 		background-size: contain;
-		height: 310px;
-		position: absolute;
-		bottom: 0;
+
+		a#play-button {
+			position: relative;
+			top: 135px;
+
+			padding: 15px 40px 12px;
+
+			font-size: 30px;
+			color: #fff;
+
+			border: 0;
+		}
 	}
 
 
 	
 
-	.play-button {
-		@include red-grad();
-		top: 135px;
-		position: relative;
-		margin: 0 auto;
-		@include rounded(5px);
-		padding: 30px 40px;
-
-		text-align: center;
-
-	}
+	
 
 	a img {
 		border: 0;
@@ -133,7 +144,7 @@ $content-width: 960px;
 		text-transform: uppercase;
 		// font-family: proxima_nova_alt_rgbold;
 		color: #FFF;
-		@include red-grad();
+		// @include red-grad();
 		font-size: 17px;
 		// font-weight: bold;
 		@include roundtb(0px, 3px, 0, 3px);
