@@ -1,89 +1,110 @@
 
+// Variables
+
+// 960 grid
 $content-width: 960px;
+
+@mixin red-grad() {
+	background: #f63a3b; /* Old browsers */
+	background: -moz-linear-gradient(top, #f63a3b 0%, #fe6d68 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f63a3b), color-stop(100%,#fe6d68)); /* Chrome,Safari4+ */
+}
 
 
 
 /* all homepage styles */
 
 .bt-content {
-	margin: 0 auto;
-	width: $content-width;
-	height: 100%;
+	// @include make-lg-column(12, 20px);
+
 }
 
-/* header styles */
 
-#bt-header {
-	padding-top: 30px;
-	padding-bottom: 60px;
-
-	img {
-		float: left;
-	}
-}
-
-#bt-header-signin {
-	float: right;
-	text-transform: uppercase;
-	color: #333;
-	// font-weight: bold;
-	background-color: #FFF;
-	padding: 6px 10px 5px 10px;
-	@include rounded(2px);
-	font-size: 13px;
-	border: 1px solid #EBEBEB;
-}
-
+// Top section (above the fold) 
 #bt-top {
-	background-image: url('../images/header photo.jpg');
-	width: 100%;
-	height: 780px;
-	position: relative;
+
+	@include img-retina('../images/header-photo.jpg', '../images/header-photo@2x.jpg', 100%, 782px);
 	background-position: center top;
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-size: cover !important;
+
+	// @include container-fixed();
+	// height: 782px;
+
+	// hold positioning for child elements
+	position: relative;
+
+	// center child elements
 	text-align: center;
+
+
+	#bt-header {
+		padding: 30px 0 60px 0;
+
+
+	}
+
+
+	// todo below
+
 
 	h3 {
 		// font-family: proxima_nova_ltregular;
 		margin-top: -20px;
 		color: #999;
 	}
+
+
+	#bt-header-signin {
+		float: right;
+		text-transform: uppercase;
+		color: #333;
+		// font-weight: bold;
+		background-color: #FFF;
+		padding: 6px 10px 5px 10px;
+		@include rounded(2px);
+		font-size: 13px;
+		border: 1px solid #EBEBEB;
+	}
+
+
+	#bt-screens {
+		background-image: url('../images/screens-multi.png');
+		width: $content-width;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		height: 310px;
+		position: absolute;
+		bottom: 0;
+	}
+
+
+	
+
+	.play-button {
+		@include red-grad();
+		top: 135px;
+		position: relative;
+		margin: 0 auto;
+		@include rounded(5px);
+		padding: 30px 40px;
+
+		text-align: center;
+
+	}
+
+	a img {
+		border: 0;
+	}
+
+
 }
 
-#bt-screens {
-	background-image: url('../images/screens-multi.png');
-	width: $content-width;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	height: 310px;
-	position: absolute;
-	bottom: 0;
-}
 
 
-@mixin red-grad() {
-	background: #f63a3b; /* Old browsers */
-	// background: -moz-linear-gradient(top, #f63a3b 0%, #fe6d68 100%); /* FF3.6+ */
-	// background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f63a3b), color-stop(100%,#fe6d68)); /* Chrome,Safari4+ */
-}
 
-.play-button {
-	@include red-grad();
-	top: 135px;
-	position: relative;
-	margin: 0 auto;
-	@include rounded(5px);
-	padding: 30px 40px;
 
-	text-align: center;
 
-}
-
-a img {
-	border: 0;
-}
 
 
 /* signup styles */

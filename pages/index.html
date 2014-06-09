@@ -4,12 +4,12 @@
 <link rel="stylesheet" type="text/css" href="{% static '/vendors/fancybox/jquery.fancybox.css' %}" />
 
 <!-- top nav information with the video -->
-<div id="bt-top">
-  <div class="bt-content">
+<div id="bt-top" class="container-fluid">
+  <div class="bt-content col-lg-12">
 
     <!-- top nav -->
     <div id="bt-header">
-      <img src="{% static '/images/browsertap logo.png' %}" alt="Browsertap Logo" />
+      <img src="{% static '/images/browsertap-logo.png' %}" class="pull-left" alt="BrowserTap" />
       <a href="/login" id="bt-header-signin">Sign In Now</a>
     </div>
 
@@ -191,29 +191,29 @@
 
 {% block scripts %}
 
-<!-- vendor -->
+  <!-- vendor -->
 
-<!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
-<script src="{% static '/vendors/js/jquery.js' %}" type="text/javascript"></script>
-<script src="{% static '/vendors/js/transit.js' %}" type="text/javascript"></script>
-<script src="{% static '/vendors/js/underscore.js' %}" type="text/javascript"></script>
-<script src="{% static '/js/bootstrap.js' %}"></script>
-<script src="{% static '/vendors/retina/retina.js' %}" type="text/javascript"></script>
-<script src="{% static '/vendors/fancybox/jquery.fancybox.js' %}" type="text/javascript"></script>
+  <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+  <script src="{% static '/vendors/js/jquery.js' %}" type="text/javascript"></script>
+  <script src="{% static '/vendors/js/transit.js' %}" type="text/javascript"></script>
+  <script src="{% static '/vendors/js/underscore.js' %}" type="text/javascript"></script>
+  <script src="{% static '/js/bootstrap.js' %}"></script>
+  <script src="{% static '/vendors/retina/retina.js' %}" type="text/javascript"></script>
+  <script src="{% static '/vendors/fancybox/jquery.fancybox.js' %}" type="text/javascript"></script>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(".play-button").fancybox({
-      width: 960,
-      height: 540,
-      padding: 0,
-      margin: 0
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".play-button").fancybox({
+        width: 960,
+        height: 540,
+        padding: 0,
+        margin: 0
+      });
     });
-  });
-</script>
+  </script>
 
-<!-- my js here -->
-<script src="{% static '/js/main.js' %}"></script>
+  <!-- my js here -->
+  <script src="{% static '/js/main.js' %}"></script>
 
 
 {% endblock scripts %}
