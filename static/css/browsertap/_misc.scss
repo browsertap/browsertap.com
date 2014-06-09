@@ -13,7 +13,6 @@ $red-color-light: #fe6d68;
 
 
 .bt-content {
-	// 
 	@extend .container; 
 }
 
@@ -27,12 +26,10 @@ $red-color-light: #fe6d68;
 	  color: #fff;
 	  border: 0;
 	  // border-color: darken($red-color, 14%);
-	  @include box-shadow(none);
 
 	  &:hover,
 	  &:focus {
 	  	border: 0;
-	  	@include gradient-vertical($start-color: darken($red-color, 14%), $end-color: darken($red-color-light, 14%));
 	    background-color: $red-color;
 	    // background-position: 0 -15px;
 	  }
@@ -40,6 +37,7 @@ $red-color-light: #fe6d68;
 	  &:active,
 	  &.active {
 	    background-color: $red-color;
+	    @include gradient-vertical($start-color: darken($red-color, 14%), $end-color: darken($red-color-light, 14%));
 	    // border-color: darken($red-color, 14%);
 	  }
 	}
@@ -111,10 +109,14 @@ $red-color-light: #fe6d68;
 // Signup styles
 
 .join-alpha-container {
-	@include make-lg-column(6);
-	@include make-lg-column-offset(3);
+	// @include make-lg-column(5);
+	// @include make-lg-column-offset(4);
 
-	margin: 50px 0;
+	margin: 0 auto;
+	max-width: 340px;
+
+	margin-top:    40px;
+	margin-bottom: 70px;
 
 	h3 {
 		font-weight: 600;
@@ -123,24 +125,39 @@ $red-color-light: #fe6d68;
 
 	span.text-muted { color: #777; }
 
-	input, button {
-		border: 0;
-		height: 40px;
+	.input-group {
+		margin-top: 10px;
 
-		@include form-control-focus($red-color);
+		input, button {
+			border: 0;
+			height: 40px;
+
+		}
+
+		input[type="text"] {
+			@include box-shadow(none);
+			@include form-control-focus($red-color);
+
+			// width: 240px;
+		}
+
+		button[type="submit"] {
+			text-transform: uppercase;
+			font-size: 17px;
+			font-weight: 600;
+
+			width: 80px;
+		}
 	}
 
-	button[type="submit"] {
-		text-transform: uppercase;
-		font-size: 17px;
-		font-weight: 600;
-
-		width: 80px;
+	&#join-alpha-top {
+		// 
 	}
 
-	input[type="text"] {
-		// width: 240px;
+	&#join-alpha-bottom {
+		h3, span { color: #fff; }
 	}
+	
 
 }
 
