@@ -26,30 +26,3 @@ h1, h2, h3, h4, h5, h6,
 	strong { font-weight: 700; }
 }
 
-
-
-
-h1 { font-size: 50px; }
-h2 { font-size: 28px; }
-h3 { font-size: 26px; }
-
-.clear { clear: both; }
-
-input {
-	// font-family: proxima_nova_rgregular;
-}
-
-span, p {
-	// font-family: proxima_nova_ltregular;
-}
-
-a {
-	// font-family: "proxima_nova_alt_rgregular";
-	font-weight: normal;
-	text-decoration: none;
-	color: #fe6d68;
-
-	&:hover {
-		text-decoration: none;
-	}
-}
