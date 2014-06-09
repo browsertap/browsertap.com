@@ -4,3 +4,5 @@ static/css/styles.css
 .build/static/js/main.js
 plugins/__init__.pyc
 plugins/default.pyc
+static/css/bootstrap.css
+static/css/bootstrap/bootstrap.css
