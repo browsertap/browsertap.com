@@ -4,17 +4,17 @@
 <link rel="stylesheet" type="text/css" href="{% static '/vendors/fancybox/jquery.fancybox.css' %}" />
 
 <!-- top block information with the video, above the fold -->
-<div id="bt-top">
-  <div class="bt-content">
+<div id="top">
+  <div class="content">
 
     <div class="row">
       <div class="col-lg-12"> 
 
         <!-- top nav -->
-        <div id="bt-header">
+        <div id="header">
           <img src="{% static '/images/browsertap-logo.png' %}" class="pull-left" alt="BrowserTap" />
 
-          <a href="/login" id="bt-header-signin" class="pull-right btn btn-default">
+          <a href="/login" id="header-signin" class="pull-right btn btn-default">
             Sign in now
           </a>
         </div>
@@ -40,7 +40,7 @@
 
         </div>
 
-        <div id="bt-screens">
+        <div id="screens">
           <a 
             href="http://player.vimeo.com/video/57151492?title=0&byline=0&portrait=0" 
             id="play-button"
@@ -57,8 +57,8 @@
 </div>
 
 <!-- middle part displaying the mini-demo -->
-<div id="bt-mid">
-  <div class="bt-content">
+<div id="mid">
+  <div class="content">
 
     <h2>
       The future of cross-browser testing <br/> 
@@ -72,44 +72,44 @@
     </h4>
     <!-- <div class="clear" style="height:30px;"></div> -->
 
-    <div id="bt-mid-demo">
-      <div id="bt-mid-bg"></div>
+    <div id="mid-demo">
+      <div id="mid-bg"></div>
 
-      <div id="bt-mid-hud">
+      <div id="mid-hud">
 
-        <div class="bt-mid-icon" data-shot="{% static '/images/browser-shots/Chrome.jpg' %}">
+        <div class="mid-icon" data-shot="{% static '/images/browser-shots/Chrome.jpg' %}">
           <img src="{% static '/images/browsers/Chrome.png' %}" />
         </div>
-        <div class="bt-mid-icon" data-shot="{% static '/images/browser-shots/Safari.jpg' %}">
+        <div class="mid-icon" data-shot="{% static '/images/browser-shots/Safari.jpg' %}">
           <img src="{% static '/images/browsers/Safari.png' %}" />
         </div>
-        <div class="bt-mid-icon" data-shot="{% static '/images/browser-shots/IE.jpg' %}">
+        <div class="mid-icon" data-shot="{% static '/images/browser-shots/IE.jpg' %}">
           <img src="{% static '/images/browsers/IE.png' %}" />
         </div>
-        <div class="bt-mid-icon" data-shot="{% static '/images/browser-shots/Firefox.jpg' %}">
+        <div class="mid-icon" data-shot="{% static '/images/browser-shots/Firefox.jpg' %}">
           <img src="{% static '/images/browsers/Firefox.png' %}" />
         </div>
-        <div class="bt-mid-icon" data-shot="{% static '/images/browser-shots/Opera.jpg' %}">
+        <div class="mid-icon" data-shot="{% static '/images/browser-shots/Opera.jpg' %}">
           <img src="{% static '/images/browsers/Opera.png' %}" />
         </div>
 
-        <div id="bt-icon-selector"></div>
+        <div id="icon-selector"></div>
 
       </div>
-      
+
     </div>
   </div>
 </div>
 
 
 <!-- feature set -->
-<div id="bt-features">
-  <div class="bt-content">
+<div id="features">
+  <div class="content">
 
     <!--  html: sections.features  -->
 
-    <div class="bt-main-feature">
-      <div class="bt-feature-header">
+    <div class="main-feature">
+      <div class="feature-header">
         <img src="{% static '/images/features/shape-6.png' %}" />
       </div>
       <h3>Responsive Testing</h3>
@@ -118,8 +118,8 @@
       </p>
     </div>
 
-    <div class="bt-main-feature">
-      <div class="bt-feature-header">
+    <div class="main-feature">
+      <div class="feature-header">
         <img src="{% static '/images/features/shape-5.png' %}" />
       </div>
       <h3>Seamless UI</h3>
@@ -128,8 +128,8 @@
       </p>
     </div>
 
-    <div class="bt-main-feature">
-      <div class="bt-feature-header">
+    <div class="main-feature">
+      <div class="feature-header">
         <img src="{% static '/images/features/shape-4.png' %}" />
       </div>
       <h3>1-Click Testing</h3>
@@ -138,8 +138,8 @@
       </p>
     </div>
 
-    <div class="bt-main-feature">
-      <div class="bt-feature-header">
+    <div class="main-feature">
+      <div class="feature-header">
         <img src="{% static '/images/features/shape-1.png' %}" />
       </div>
       <h3>Parallel Testing</h3>
@@ -148,8 +148,8 @@
       </p>
     </div>
 
-    <div class="bt-main-feature">
-      <div class="bt-feature-header">
+    <div class="main-feature">
+      <div class="feature-header">
         <img src="{% static '/images/features/shape-8.png' %}" />
       </div>
       <h3>Local Testing</h3>
@@ -158,8 +158,8 @@
       </p>
     </div>
 
-    <div class="bt-main-feature">
-      <div class="bt-feature-header">
+    <div class="main-feature">
+      <div class="feature-header">
         <img src="{% static '/images/features/shape-9.png' %}" />
       </div>
       <h3>Developer Tools</h3>
@@ -172,8 +172,8 @@
 </div>
 
 <!-- extra features -->
-<div id="bt-extra-features">
-  <div class="bt-content">
+<div id="extra-features">
+  <div class="content">
     <h3><strong>Features in Alpha:</strong></h3>
 
     <div class="clearfix" id="all-features">
@@ -187,8 +187,8 @@
 <div class="clear" style="height: 60px;"></div>
 
 <!-- footer - call to action here -->
-<div id="bt-footer">
-  <div id="bt-content-footer">
+<div id="footer">
+  <div id="content-footer">
 
     <!-- call to action -->
     <div id="join-alpha-bottom" class="join-alpha-container join-alpha-container-footer clear">
@@ -201,11 +201,11 @@
     </div>
 
 
-    <div id="bt-footer-footer">
-      <div id="bt-footer-mixpanel-badge">
+    <div id="footer-footer">
+      <div id="footer-mixpanel-badge">
         <a href="http://mixpanel.com/f/partner"><img src="http://cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
       </div>
-      <div id="bt-footer-links">
+      <div id="footer-links">
         <a href="http://spiceapps.com">About</a> <span>|</span>
         <a href="mailto:hello@browsertap.com">Contact</a> <span>|</span>
         <a href="http://craigandtim.com">Blog</a> <span>|</span>

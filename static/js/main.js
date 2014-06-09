@@ -88,7 +88,7 @@ function injectAllFeatures() {
 		var implemented = features[name];
 
 		$allFeatures.append(
-			'<div class="bt-extra-feature">\
+			'<div class="extra-feature">\
 				<span class="fextra-' + (Number(implemented)) + '">&#' + (implemented ? "10004" : "10007") + ';</span>\
 				' + name + '\
 			</div>'
@@ -100,16 +100,16 @@ function injectAllFeatures() {
 function injectHoverStates() {
 	var $current, 
 	ignoreTimer, 
-	$btMidIcons = $(".bt-mid-icon"), 
+	$btMidIcons = $(".mid-icon"), 
 	n = $btMidIcons.length,
-	$selector = $("#bt-icon-selector"),
-	$midBg = $("#bt-mid-bg");
+	$selector = $("#icon-selector"),
+	$midBg = $("#mid-bg");
 
 	function select($c) {
-		if($current) $current.removeClass("bt-mid-icon-selected");
+		if($current) $current.removeClass("mid-icon-selected");
 		$current = $c;
 		$selector.css({"visibility":"visible"}).transit({ left: $c.position().left + 25 }, 200);
-		$c.addClass("bt-mid-icon-selected");
+		$c.addClass("mid-icon-selected");
 
 		loadImage($c.attr("data-shot"), function(img) {
 			$midBg.find("img").remove();
@@ -122,11 +122,11 @@ function injectHoverStates() {
 		select($(this));
 	}, 100));
 
-	$("#bt-mid-hud").mouseover(function() {
+	$("#mid-hud").mouseover(function() {
 		ignoreTimer = true;
 	});
 
-	$("#bt-mid-hud").mouseout(function() {
+	$("#mid-hud").mouseout(function() {
 		ignoreTimer = false;
 	});
 
@@ -136,7 +136,7 @@ function injectHoverStates() {
 		select($($btMidIcons[ci]));
 	}, 3000);
 
-	select($($(".bt-mid-icon")[0]));
+	select($($(".mid-icon")[0]));
 }
 
 function loadImage(url, cb) {
