@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 //
 // Global styles
 // --------------------------------------------------
@@ -41,9 +43,6 @@ h3 { font-size: 26px; }
 // 960 grid
 $content-width:   960px;
 
-$red-color:       #f63a3b;
-$red-color-light: #fe6d68;
-
 
 // Quick cursor prefix mixin for non-supported cursors like grab, grabbing, zoom-in, zoom-out
 @mixin cursor($value) {
@@ -69,6 +68,8 @@ $red-color-light: #fe6d68;
 // Signup styles
 // --------------------------------------------------
 
+$red-color:       #f63a3b;
+$red-color-light: #fe6d68;
 
 .join-alpha-container {
 	// @include make-lg-column(5);
@@ -123,10 +124,9 @@ $red-color-light: #fe6d68;
 
 }
 
-
 .btn {
 	&.btn-red {
-		@include gradient-vertical($start-color: $red-color, $end-color: $red-color-light);
+		@include gradient-vertical($red-color, $red-color-light);
 	  @include reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
 	  background-repeat: repeat-x;
 
@@ -144,12 +144,11 @@ $red-color-light: #fe6d68;
 	  &:active,
 	  &.active {
 	    background-color: $red-color;
-	    @include gradient-vertical($start-color: darken($red-color, 14%), $end-color: darken($red-color-light, 14%));
+	    @include gradient-vertical(darken($red-color, 14%), darken($red-color-light, 14%));
 	    // border-color: darken($red-color, 14%);
 	  }
 	}
 }
-
 
 
 // 
@@ -214,8 +213,6 @@ $red-color-light: #fe6d68;
 }
 
 
-
-
 // 
 // Middle block (at the fold)
 // --------------------------------------------------
@@ -223,7 +220,7 @@ $red-color-light: #fe6d68;
 #mid {
 	@include container-fixed();
 
-	@include gradient-vertical($start-color: #202020, $end-color: #303030);
+	@include gradient-vertical(#202020, #303030);
 
 	padding-top: 50px;
 
@@ -371,56 +368,71 @@ $red-color-light: #fe6d68;
 // --------------------------------------------------
 
 
-/* extra features */
-
 #extra-features {
-	width: 100%;
-	text-align: center;
-	padding-top: 50px;
+	@include container-fixed();
+	@include gradient-vertical(#f0f0f0, #fff, 0%, 20%);
+
+	padding-top: 30px;
 
 	h3 {
 		color: #000;
 		text-transform: uppercase;
+		text-align: center;
+		font-weight: 700;
+
+		margin-bottom: 40px;
 	}
-}
 
+	ul#all-features {
+		@include make-row();
 
-.extra-feature {
-	text-align: left;
-	background-color: #F4F4F4;
-	// @include rounded(2px);
-	float: left;
-	font-size: 13px;
-	color: #666;
-	padding-top: 4px;
-	padding-bottom: 4px;
+		li {
+			@include make-sm-column(6, 50px);
+			@include make-md-column(4, 50px);
 
+			> span {
+				display: block;
+				background-color: #f4f4f4;
+				padding: 4px 10px;
+				margin-top: 5px;
 
-	width: ($content-width - 135px)/3;
-	margin-left: 40px;
-	margin-top: 10px;
-	padding-left: 4px;
+				font-size: 13px;
+				font-weight: 500;
+				color: $gray;
+			}
 
-	span {
-		font-size: 18px;
-		padding-right: 10px;
+			&.true, &.false {
+				> span:before {
+					display: inline-block;
+					width: 25px;
+
+					font-size: 18px;
+					padding-right: 10px;
+				}
+			}
+
+			&.true > span:before {
+				content: "\2714"; // ✔
+				color: #5DB000;
+			}
+
+			&.false > span:before {
+				content: "\2717"; // ✗
+				color: #FD7067;
+			}
+		}
+		
 	}
+	
 }
 
 
-#all-features {
-	width: $content-width;
-	height: 100%;	
-}
+// 
+// Footer block
+// --------------------------------------------------
 
 
-.fextra-1 {
-	color: #5DB000;	
-}
 
-.fextra-0 {
-	color: #FD7067;
-}
 
 /* footer */
 

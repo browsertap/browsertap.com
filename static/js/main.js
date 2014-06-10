@@ -1,10 +1,9 @@
 $(document).ready(function() {
 	// analytics.track("Home Page Visit");
-	injectAllFeatures();
+	// injectAllFeatures();
 	injectHoverStates();
 	// injectAnalytics();
 })
-
 
 
 function injectAnalytics() {
@@ -39,38 +38,32 @@ function injectAnalytics() {
 
 }
 
-//this is TEMPORARY! 
+// this was TEMPORARY! 
+// and now deprecated
 function injectAllFeatures() {
 
 	var features = {
-
 		"Test across multiple browsers (30+)": true,
 		"Browser Developer Tools": true,
 		// "Automated CSS Testing": false,
 		// "Automated Interactive Testing": false,
 		// "Automated JS Testing": false,
-
 		"No Installation Required": true,
 		// "Browser extensions & bookmarklet": true,
 		"Localhost Support": true,
 		"Android Testing": false,
-
 		"1-Click Testing": true,
 		// "History Support (back & forward)": false,
 		"iPhone Testing": false,
-
 		"Clipboard Support (copy & paste)": true,
 		"Real IE browsers (not IETester)": false,
 		"Mac Testing (of Mac browsers)": false,
-
 		// "Drag & drop file support": false,
 		"Keyboard Shortcuts": true,
 		"PC Testing (of PC browsers)": true,
-
 		// "Sceenshot Testing": false,
 		"Responsive Testing": true,
 		"Linux Testing (of Linux browsers)": false,
-		
 		"Parallel Testing": true,
 		// "Audio Support": false,
 		// "Natural Scrolling": false,
@@ -82,15 +75,17 @@ function injectAllFeatures() {
 		// "Synchronized parallel testing": false
 	};
 
-	$allFeatures = $("#all-features");
+	// $allFeatures = $("#all-features");
 
 	for(var name in features) {
 		var implemented = features[name];
 
-		$allFeatures.append(
-			'<div class="extra-feature">\
-				<span class="fextra-' + (Number(implemented)) + '">&#' + (implemented ? "10004" : "10007") + ';</span>\
-				' + name + '\
+		$("#all-features").append (
+			'<div class="extra-feature-container">\
+				<div class="extra-feature">\
+					<span class="fextra-' + (Number(implemented)) + '">&#' + (implemented ? "10004" : "10007") + ';</span>\
+					' + name + '\
+				</div>\
 			</div>'
 		);
 	}
