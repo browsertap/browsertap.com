@@ -7,50 +7,43 @@
 <div id="top">
   <div class="content">
 
-    <div class="row">
-      <div class="col-lg-12"> 
+    <!-- top nav -->
+    <div id="header">
+      <img src="{% static '/images/browsertap-logo.png' %}" class="pull-left" alt="BrowserTap" />
 
-        <!-- top nav -->
-        <div id="header">
-          <img src="{% static '/images/browsertap-logo.png' %}" class="pull-left" alt="BrowserTap" />
+      <a href="/login" id="header-signin" class="pull-right btn btn-default">
+        Sign in now
+      </a>
+    </div>
 
-          <a href="/login" id="header-signin" class="pull-right btn btn-default">
-            Sign in now
-          </a>
-        </div>
-
-        <!-- big obnoxious header that should scare anyone away from the product -->
-        <h1>Fast and interactive <strong>cross-browser testing.</strong></h1>
-        <h2>Instant access to desktop browsers. No installs, no fuss.</h2>
+    <!-- big obnoxious header that should scare anyone away from the product -->
+    <h1>Fast and interactive <strong>cross-browser testing.</strong></h1>
+    <h2>Instant access to desktop browsers. No installs, no fuss.</h2>
 
 
-        <!-- call to action -->
-        <div id="join-alpha-top" class="join-alpha-container clearfix">
-          <h3>Join the alpha today.</h3>
-          <span class="text-muted">Completely free to sign up. Limited spots available.</span>
+    <!-- call to action -->
+    <div id="join-alpha-top" class="join-alpha-container clearfix">
+      <h3>Join the alpha today.</h3>
+      <span class="text-muted">Completely free to sign up. Limited spots available.</span>
 
-          <form action="http://spiceapps.createsend.com/t/j/s/drdhti/" name="mc-embedded-subscribe-form" method="post">
-            <div class="input-group">
-              <input name="cm-drdhti-drdhti" type="text" placeholder="Email Address" class="form-control">
-              <span class="input-group-btn">
-                <button class="btn btn-red" type="submit" name="subscribe">Send</button>
-              </span>
-            </div><!-- /input-group -->
-          </form>
+      <form action="http://spiceapps.createsend.com/t/j/s/drdhti/" name="mc-embedded-subscribe-form" method="post">
+        <div class="input-group">
+          <input name="cm-drdhti-drdhti" type="text" placeholder="Email Address" class="form-control">
+          <span class="input-group-btn">
+            <button class="btn btn-red" type="submit" name="subscribe">Send</button>
+          </span>
+        </div><!-- /input-group -->
+      </form>
+    </div>
 
-        </div>
-
-        <div id="screens">
-          <a 
-            href="http://player.vimeo.com/video/57151492?title=0&byline=0&portrait=0" 
-            id="play-button"
-            class="btn btn-red btn-lg fancybox fancybox.iframe">
-            <span class="glyphicon glyphicon-play"></span>
-            <!-- <img src="{% static '/images/shape-1.png' %}" alt="Play button" /> -->
-          </a>
-        </div>
-
-      </div>
+    <div id="screens">
+      <a 
+        href="http://player.vimeo.com/video/57151492?title=0&byline=0&portrait=0" 
+        id="play-button"
+        class="btn btn-red btn-lg fancybox fancybox.iframe">
+        <span class="glyphicon glyphicon-play"></span>
+        <!-- <img src="{% static '/images/shape-1.png' %}" alt="Play button" /> -->
+      </a>
     </div>
 
   </div>
@@ -193,28 +186,34 @@
   <div id="content-footer">
 
     <!-- call to action -->
-    <div id="join-alpha-bottom" class="join-alpha-container join-alpha-container-footer clear">
-      <h2>Join the alpha today.</h2>
-      <span>Completely free to sign up. Limited spots available.</span>
+    <div id="join-alpha-bottom" class="join-alpha-container clearfix">
+      <h3>Join the alpha today.</h3>
+      <span class="text-muted">Completely free to sign up. Limited spots available.</span>
+
       <form action="http://spiceapps.createsend.com/t/j/s/drdhti/" name="mc-embedded-subscribe-form" method="post">
-        <input name="cm-drdhti-drdhti" type="text" placeholder="Email Address" />
-        <input type="submit" name="subscribe" value="Send" />
+        <div class="input-group">
+          <input name="cm-drdhti-drdhti" type="text" placeholder="Email Address" class="form-control">
+          <span class="input-group-btn">
+            <button class="btn btn-red" type="submit" name="subscribe">Send</button>
+          </span>
+        </div><!-- /input-group -->
       </form>
     </div>
 
 
-    <div id="footer-footer">
-      <div id="footer-mixpanel-badge">
-        <a href="http://mixpanel.com/f/partner"><img src="http://cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
-      </div>
-      <div id="footer-links">
-        <a href="http://spiceapps.com">About</a> <span>|</span>
-        <a href="mailto:hello@browsertap.com">Contact</a> <span>|</span>
-        <a href="http://craigandtim.com">Blog</a> <span>|</span>
-        <a href="http://twitter.com/browsertap" target="_blank"><img src="{% static '/images/shape-10.png' %}" />Twitter</a>
-      </div>
-      <span>Copyright &copy; 2014 Spice Apps. All rights reserved.</span>
+    <!-- <div id="footer-mixpanel-badge">
+      <a href="http://mixpanel.com/f/partner">
+        <img src="http://cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" />
+      </a>
+    </div> -->
+    <div id="footer-links">
+      <a href="http://spiceapps.com">About</a> <span>|</span>
+      <a href="mailto:hello@browsertap.com">Contact</a> <span>|</span>
+      <a href="http://github.com/browsertap">GitHub</a> <span>|</span>
+      <a href="http://twitter.com/browsertap" target="_blank"><img src="{% static '/images/shape-10.png' %}" />Twitter</a>
     </div>
+    <span id="copyright">Copyright &copy; 2014 Spice Apps. All rights reserved.</span>
+
   </div>
 </div>
 
