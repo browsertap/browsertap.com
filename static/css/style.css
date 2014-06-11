@@ -8,6 +8,7 @@ body {
 }
 
 p {
+	text-align: center;
 	line-height:1.8;
 }
 
@@ -41,10 +42,11 @@ a#documentation {
 	margin: 0 auto;
 	padding:0 40px 0 40px;
 	max-width:600px;
-	position: relative; top: 50%;
+	position: relative; 
+	top: 50%;
 	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
 }
 
 #badge {
