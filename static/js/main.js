@@ -1,40 +1,40 @@
 $(document).ready(function() {
-	// analytics.track("Home Page Visit");
-	// injectAllFeatures();
-	injectHoverStates();
-	// injectAnalytics();
+  // analytics.track("Home Page Visit");
+  // injectAllFeatures();
+  injectHoverStates();
+  // injectAnalytics();
 })
 
 
 function injectAnalytics() {
-	$(".play-button").click(function() {
-		analytics.track("Play BrowserTap Video");
-	});
+  $(".play-button").click(function() {
+    analytics.track("Play BrowserTap Video");
+  });
 
-	// analytics.timeout = 1000;
+  // analytics.timeout = 1000;
 
-	var forms = $("[name='mc-embedded-subscribe-form']");
+  var forms = $("[name='mc-embedded-subscribe-form']");
 
-	function bindSubmit(form) {
-		var oldSubmit = form.onsubmit;
-		// console.log($(form).find("[type='submit']"))
-		form.onsubmit = null;
-		$(form).find("[type='submit']").click(function(e) {
-			analytics.track("Sign Up For Alpha");
-			var self = this;
-			e.preventDefault();
-			e.stopPropagation();
-			setTimeout(function() {
-				// oldSubmit.call(self);
-				$(form).submit();
-			}, 250);
-		})
-	}
+  function bindSubmit(form) {
+    var oldSubmit = form.onsubmit;
+    // console.log($(form).find("[type='submit']"))
+    form.onsubmit = null;
+    $(form).find("[type='submit']").click(function(e) {
+      analytics.track("Sign Up For Alpha");
+      var self = this;
+      e.preventDefault();
+      e.stopPropagation();
+      setTimeout(function() {
+        // oldSubmit.call(self);
+        $(form).submit();
+      }, 250);
+    })
+  }
 
 
-	for(var i = forms.length; i--;) {
-		bindSubmit(forms[i]);
-	}
+  for(var i = forms.length; i--;) {
+    bindSubmit(forms[i]);
+  }
 
 }
 
@@ -42,100 +42,100 @@ function injectAnalytics() {
 // and now deprecated
 function injectAllFeatures() {
 
-	var features = {
-		"Test across multiple browsers (30+)": true,
-		"Browser Developer Tools": true,
-		// "Automated CSS Testing": false,
-		// "Automated Interactive Testing": false,
-		// "Automated JS Testing": false,
-		"No Installation Required": true,
-		// "Browser extensions & bookmarklet": true,
-		"Localhost Support": true,
-		"Android Testing": false,
-		"1-Click Testing": true,
-		// "History Support (back & forward)": false,
-		"iPhone Testing": false,
-		"Clipboard Support (copy & paste)": true,
-		"Real IE browsers (not IETester)": false,
-		"Mac Testing (of Mac browsers)": false,
-		// "Drag & drop file support": false,
-		"Keyboard Shortcuts": true,
-		"PC Testing (of PC browsers)": true,
-		// "Sceenshot Testing": false,
-		"Responsive Testing": true,
-		"Linux Testing (of Linux browsers)": false,
-		"Parallel Testing": true,
-		// "Audio Support": false,
-		// "Natural Scrolling": false,
-		// "Emulator API": false,
-		// "Live Browser Reloads": false,
-		// "Screensharing & Team Collaboration": false,
-		// "Web Camera Support": false,
-		"Unlimited Testing": true,
-		// "Synchronized parallel testing": false
-	};
+  var features = {
+    "Test across multiple browsers (30+)": true,
+    "Browser Developer Tools": true,
+    // "Automated CSS Testing": false,
+    // "Automated Interactive Testing": false,
+    // "Automated JS Testing": false,
+    "No Installation Required": true,
+    // "Browser extensions & bookmarklet": true,
+    "Localhost Support": true,
+    "Android Testing": false,
+    "1-Click Testing": true,
+    // "History Support (back & forward)": false,
+    "iPhone Testing": false,
+    "Clipboard Support (copy & paste)": true,
+    "Real IE browsers (not IETester)": false,
+    "Mac Testing (of Mac browsers)": false,
+    // "Drag & drop file support": false,
+    "Keyboard Shortcuts": true,
+    "PC Testing (of PC browsers)": true,
+    // "Sceenshot Testing": false,
+    "Responsive Testing": true,
+    "Linux Testing (of Linux browsers)": false,
+    "Parallel Testing": true,
+    // "Audio Support": false,
+    // "Natural Scrolling": false,
+    // "Emulator API": false,
+    // "Live Browser Reloads": false,
+    // "Screensharing & Team Collaboration": false,
+    // "Web Camera Support": false,
+    "Unlimited Testing": true,
+    // "Synchronized parallel testing": false
+  };
 
-	// $allFeatures = $("#all-features");
+  // $allFeatures = $("#all-features");
 
-	for(var name in features) {
-		var implemented = features[name];
+  for(var name in features) {
+    var implemented = features[name];
 
-		$("#all-features").append (
-			'<div class="extra-feature-container">\
-				<div class="extra-feature">\
-					<span class="fextra-' + (Number(implemented)) + '">&#' + (implemented ? "10004" : "10007") + ';</span>\
-					' + name + '\
-				</div>\
-			</div>'
-		);
-	}
+    $("#all-features").append (
+      '<div class="extra-feature-container">\
+        <div class="extra-feature">\
+          <span class="fextra-' + (Number(implemented)) + '">&#' + (implemented ? "10004" : "10007") + ';</span>\
+          ' + name + '\
+        </div>\
+      </div>'
+    );
+  }
 
 }
 
 function injectHoverStates() {
-	var $current, 
-	ignoreTimer, 
-	$btMidIcons = $(".mid-icon"), 
-	n = $btMidIcons.length,
-	$selector = $("#icon-selector"),
-	$midBg = $("#mid-bg");
+  var $current, 
+  ignoreTimer, 
+  $btMidIcons = $(".mid-icon"), 
+  n = $btMidIcons.length,
+  $selector = $("#icon-selector"),
+  $midBg = $("#mid-bg");
 
-	function select($c) {
-		if($current) $current.removeClass("mid-icon-selected");
-		$current = $c;
-		$selector.css({"visibility":"visible"}).transit({ left: $c.position().left + 25 }, 200);
-		$c.addClass("mid-icon-selected");
+  function select($c) {
+    if($current) $current.removeClass("mid-icon-selected");
+    $current = $c;
+    $selector.css({"visibility":"visible"}).transit({ left: $c.position().left + 25 }, 200);
+    $c.addClass("mid-icon-selected");
 
-		loadImage($c.attr("data-shot"), function(img) {
-			$midBg.find("img").remove();
-			$midBg.append(img);
-		});
-	}
+    loadImage($c.attr("data-shot"), function(img) {
+      $midBg.find("img").remove();
+      $midBg.append(img);
+    });
+  }
 
 
-	$btMidIcons.hover(_.throttle(function() {
-		select($(this));
-	}, 100));
+  $btMidIcons.hover(_.throttle(function() {
+    select($(this));
+  }, 100));
 
-	$("#mid-hud").mouseover(function() {
-		ignoreTimer = true;
-	});
+  $("#mid-hud").mouseover(function() {
+    ignoreTimer = true;
+  });
 
-	$("#mid-hud").mouseout(function() {
-		ignoreTimer = false;
-	});
+  $("#mid-hud").mouseout(function() {
+    ignoreTimer = false;
+  });
 
-	setInterval(function() {
-		if(ignoreTimer) return;
-		var ci = ($current.index() + 1) % n;
-		select($($btMidIcons[ci]));
-	}, 3000);
+  setInterval(function() {
+    if(ignoreTimer) return;
+    var ci = ($current.index() + 1) % n;
+    select($($btMidIcons[ci]));
+  }, 3000);
 
-	select($($(".mid-icon")[0]));
+  select($($(".mid-icon")[0]));
 }
 
 function loadImage(url, cb) {
-	$("<img src=\""+url+"\" />").load(function() {
-		cb($(this));
-	})
+  $("<img src=\""+url+"\" />").load(function() {
+    cb($(this));
+  })
 }
